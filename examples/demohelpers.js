@@ -8,11 +8,14 @@ $(function() {
       piwikTracker.enableLinkTracking();
     } catch (err) {}
 
-    s = document.createElement('script');
-    t = document.getElementsByTagName('script')[0];
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-    return t.parentNode.insertBefore(s, t);
+    var urls = ['//s7.addthis.com/js/300/addthis_widget.js#pubid=sebobo', 'http://api.flattr.com/js/0.6/load.js?mode=auto'];
+    for (key in urls) {
+      var s = document.createElement('script'),
+          t = document.getElementsByTagName('script')[0];
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[key];
+      return t.parentNode.insertBefore(s, t);
+    }
   }
 });
