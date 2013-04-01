@@ -8,7 +8,6 @@ $(function() {
       piwikTracker.enableLinkTracking();
     } catch (err) {}
 
-    document.write(unescape("%3Cscript src='http://s7.addthis.com/js/250/addthis_widget.js#pubid=sebobo' type='text/javascript'%3E%3C/script%3E"));
     s = document.createElement('script');
     t = document.getElementsByTagName('script')[0];
     s.type = 'text/javascript';
