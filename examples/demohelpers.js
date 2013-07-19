@@ -7,16 +7,11 @@ $(function() {
       piwikTracker.trackPageView();
       piwikTracker.enableLinkTracking();
     } catch (err) {}
-
-    var urls = ['http://api.flattr.com/js/0.6/load.js?mode=auto', '//s7.addthis.com/js/300/addthis_widget.js#pubid=sebobo'];
-    for (key in urls) {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = urls[key];
-
-      var t = document.getElementsByTagName('script')[0];
-      t.parentNode.insertBefore(s, t);
-    }
+    s = document.createElement('script');
+    t = document.getElementsByTagName('script')[0];
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+    return t.parentNode.insertBefore(s, t);
   }
 });

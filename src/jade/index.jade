@@ -61,14 +61,6 @@ append content
 
   br.clear
   br
-  .column.last
-    // AddThis Button BEGIN
-    .addthis_toolbox.addthis_default_style
-      a.addthis_button_facebook_like(fb:like:layout="button_count")
-      a.addthis_button_tweet
-      a.addthis_button_google_plusone(g:plusone:size="medium")
-      a.addthis_counter.addthis_pill_style
-    // AddThis Button END
   .column
     // Flattr button BEGIN
     a.FlattrButton.hidden(rev="flattr;button:compact;", href="http://sebobo.github.com/jquery.rondell")
@@ -76,6 +68,9 @@ append content
       a(href="http://flattr.com/thing/460088/jQuery-Rondell-by-Sebastian-Helzle", target="_blank")
         img(src="http://api.flattr.com/button/flattr-badge-large.png", alt="Flattr this", title="Flattr this", border="0")
     // Flattr button END
+  .column.last
+    a(href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TSN2TDYNKZHF4", title="Buy me a beer and support this project", target="_blank") Buy me a beer if you like this project :-)
+
   br
   br#usage
 
